@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌌 Cosmic Watch - Space Monitoring Platform
 
 A full-stack web application for monitoring Near-Earth Objects (NEOs) using NASA's NeoWs API. Track asteroids, analyze risk levels, and receive alerts about potentially hazardous space objects.
@@ -330,3 +331,6 @@ Built with ❤️ for the IIT Hackathon
 ---
 
 **Note**: This application uses NASA's DEMO_KEY by default, which has rate limits. For production use, obtain a personal API key from https://api.nasa.gov
+=======
+# iit-hackthon
+>>>>>>> 0704e3ac29e4f2a083b6b580f47d7b7f9baeca40
