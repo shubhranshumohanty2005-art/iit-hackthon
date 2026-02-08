@@ -1,0 +1,165 @@
+.asteroid-detail {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  color: var(--accent-secondary);
+  transform: translateX(-4px);
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 24px;
+}
+
+.detail-header h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.asteroid-id {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-card h2 {
+  font-size: 20px;
+  color: var(--text-primary);
+  margin: 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.risk-score-display {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-glow);
+  position: relative;
+}
+
+.score-circle::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--bg-card);
+}
+
+.score-value {
+  font-size: 48px;
+  font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.score-label {
+  font-size: 16px;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.chat-section {
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+.watchlist-badge {
+  background: rgba(16, 185, 129, 0.2);
+  border: 2px solid var(--risk-low);
+  color: var(--risk-low);
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .detail-header {
+    flex-direction: column;
+  }
+
+  .detail-header h1 {
+    font-size: 32px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-actions {
+    flex-direction: column;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+}

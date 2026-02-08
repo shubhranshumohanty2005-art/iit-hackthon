@@ -1,0 +1,279 @@
+/* EarthViewer.css */
+.earth-viewer-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.earth-ui-overlay {
+  position: absolute;
+  top: 80px; /* Adjusted for Navbar */
+  left: 30px;
+  background: rgba(15, 23, 42, 0.85); /* Dark theme adjustment */
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  color: #e2e8f0;
+  max-width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.earth-ui-overlay h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #60a5fa; /* Accent color */
+}
+
+.earth-time-display {
+  font-size: 36px;
+  font-weight: 700;
+  color: #60a5fa;
+  margin: 15px 0;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.5px;
+  font-family: 'Orbitron', monospace;
+}
+
+.earth-date-display {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.earth-info-section {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.earth-info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.earth-info-label {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.earth-info-value {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.earth-control-group {
+  margin: 15px 0;
+}
+
+.earth-control-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.earth-select, .earth-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: rgba(30, 41, 59, 0.8);
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+.earth-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+
+.earth-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.earth-select:focus, .earth-btn:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.earth-toggle-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.earth-toggle-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 12px;
+  background: rgba(30, 41, 59, 0.5);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.earth-toggle-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.earth-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 40px 60px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 20;
+}
+
+.earth-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #334155;
+  border-top: 4px solid #60a5fa;
+  border-radius: 50%;
+  animation: earth-spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes earth-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.earth-loading-text {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.earth-sun-indicator {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.earth-sun-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.4);
+  position: relative;
+  animation: earth-glow 2s ease-in-out infinite;
+}
+
+@keyframes earth-glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(217, 119, 6, 0.4); }
+  50% { box-shadow: 0 4px 30px rgba(217, 119, 6, 0.6); }
+}
+
+.earth-sun-label {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.earth-range {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #334155 0%, #3b82f6 0%);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.earth-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #60a5fa;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
+}
+
+.earth-slider-value {
+  text-align: right;
+  font-size: 13px;
+  color: #60a5fa;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Close button for overlay on mobile */
+@media (max-width: 768px) {
+  .earth-ui-overlay {
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    max-width: none;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+  
+  .earth-sun-indicator {
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+  }
+  
+  .earth-sun-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Alert slide-in animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,131 @@
+.alerts-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.alerts-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.alerts-header h1 {
+  font-size: 48px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.alerts-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  transition: var(--transition);
+}
+
+.alert-unread {
+  border-left: 4px solid var(--accent-primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.alert-critical {
+  border-left-color: var(--risk-critical);
+}
+
+.alert-warning {
+  border-left-color: var(--risk-high);
+}
+
+.alert-info {
+  border-left-color: var(--accent-primary);
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.alert-header h3 {
+  font-size: 18px;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.alert-message {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.alert-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.alert-type {
+  text-transform: capitalize;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .alert-item {
+    flex-direction: column;
+  }
+
+  .alert-actions {
+    width: 100%;
+  }
+
+  .alert-actions .btn {
+    flex: 1;
+  }
+
+  .alerts-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-buttons {
+    width: 100%;
+  }
+
+  .filter-buttons .btn {
+    flex: 1;
+  }
+}

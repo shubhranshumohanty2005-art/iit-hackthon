@@ -1,0 +1,35 @@
+/* Additional green glow effects for interactive elements */
+
+/* Apply to all button-like elements */
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5) !important;
+  filter: brightness(1.1);
+}
+
+/* Links with green glow */
+a:hover {
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+/* Card hover with green accent */
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 30px rgba(34, 197, 94, 0.3) !important;
+}
+
+/* Badge pulse effect with green */
+.badge:hover {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Input focus with green glow */
+.input:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1), 0 0 20px rgba(34, 197, 94, 0.3) !important;
+}

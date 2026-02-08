@@ -1,0 +1,77 @@
+.watchlist {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.watchlist-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.watchlist-header h1 {
+  font-size: 48px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.watchlist-grid {
+  margin-bottom: 40px;
+}
+
+.watchlist-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.watchlist-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.watchlist-item-header h3 {
+  font-size: 18px;
+  margin: 0;
+  flex: 1;
+}
+
+.watchlist-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.watchlist-item-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.watchlist-item-actions .btn {
+  flex: 1;
+  font-size: 13px;
+  padding: 10px 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.empty-state h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-size: 16px;
+}
