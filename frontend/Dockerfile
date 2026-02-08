@@ -17,6 +17,7 @@ COPY . .
 ARG VITE_API_URL
 ENV VITE_API_URL=$VITE_API_URL
 ENV NODE_OPTIONS="--max-old-space-size=4096"
+RUN ls -R src
 RUN npm run build
 
 # Production stage with Nginx
